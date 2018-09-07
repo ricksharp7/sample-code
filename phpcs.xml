@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ruleset name="CauseLabs_PHP_CodeSniffer">
+    <description>CauseLabs PHP Coding Standards</description>
+    
+    <rule ref="PSR2">
+        <exclude name="PEAR.Functions.FunctionCallSignature"/>
+    </rule>
+    <rule ref="Symfony">
+        <exclude name="Symfony.NamingConventions.ValidClassName.InvalidTraitName"/>
+        <exclude name="Symfony.Commenting.Annotations.Invalid"/>
+        <exclude name="Symfony.Commenting.ClassComment.Missing"/>
+        <exclude name="Symfony.Commenting.License.Warning"/>
+        <exclude name="Zend.NamingConventions.ValidVariableName.NotCamelCaps"/>
+    </rule>
+    <rule ref="Squiz.Strings.ConcatenationSpacing.PaddingFound">
+        <exclude-pattern>*</exclude-pattern>
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+    </rule>
+    <rule ref="Generic.Files.LineLength.MaxExceeded">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <exclude-pattern>node_modules/</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>.git</exclude-pattern>
+    <exclude-pattern>*/database/*</exclude-pattern>
+    <exclude-pattern>*/cache/*</exclude-pattern>
+    <exclude-pattern>*/*.blade.php</exclude-pattern>
+    <exclude-pattern>*/autoload.php</exclude-pattern>
+    <exclude-pattern>*/storage/*</exclude-pattern>
+    <exclude-pattern>*/docs/*</exclude-pattern>
+    <exclude-pattern>*/migrations/*</exclude-pattern>
+    <exclude-pattern>*/config/*</exclude-pattern>
+    <exclude-pattern>*/public/index.php</exclude-pattern>
+    <exclude-pattern>*/*.blade.php</exclude-pattern>
+</ruleset>
